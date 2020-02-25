@@ -5,6 +5,9 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Todo from "./components/Todo";
 import Chat from "./components/Chat";
+import Map from "./components/Map";
+import MeetUp from "./components/MeetUp";
+import Reminder from "./components/Reminder";
 
 import "./App.css";
 
@@ -14,8 +17,11 @@ function App() {
       <Home />
       <Login />
       <Signup />
-      <Todo />
+      <Map />
+      <MeetUp />
+      <Reminder />
       <Chat />
+      <Todo />
     </div>
   );
 }
