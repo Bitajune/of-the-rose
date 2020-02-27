@@ -31,7 +31,7 @@ const NavBar = ({ routes = [] }) => {
             </Link>
           </NavLeft>
           <NavMiddle>
-            <p>Of The Rose</p>
+            <p className="title">Of The Rose</p>
           </NavMiddle>
           <NavRight>
             {routes.map(route => (

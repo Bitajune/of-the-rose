@@ -18,7 +18,12 @@ code {
 }
 
 .nav-img {
-  height: 85px;
+  height: 69px;
   border-style: solid;
   border-color: rgb(214, 247, 243);
+}
+
+.title {
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
