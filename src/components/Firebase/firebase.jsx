@@ -1,4 +1,5 @@
 import app from "firebase/app";
+import "firebase/firestore";
 import "firebase/auth";
 
 const config = {
@@ -9,5 +10,25 @@ const config = {
   storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID
 };
+
+class Firebase {
+  constructor() {
+    app.initializeApp(config);
+    this.auth = app.auth();
+    this.database = app.firestore();
+  }
+
+  doCreateUserWithEmailAndPassword = (email, password) =>
+    this.auth.createUserWithEmailAndPassword(email, password);
+
+  doSignInWithEmailAndPassword = (email, password) =>
+    this.auth.signInWithEmailAndPassword(email, password);
+
+  doPasswordReset = email => this.auth.sendPasswordResetEmail(email);
+
+  doSignOut = () => this.auth.signOut();
+}
+
+const firebase = new Firebase();
 
 export default firebase;
