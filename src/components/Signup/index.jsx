@@ -20,7 +20,7 @@ class Signup extends Component {
   };
 
   handleFormSubmit = async e => {
-    const { email, passwordOne, username } = this.state;
+    const { email, passwordOne } = this.state;
     e.preventDefault();
     try {
       await Firebase.doCreateUserWithEmailAndPassword(email, passwordOne);
@@ -97,7 +97,7 @@ class Signup extends Component {
             Submit
           </button>
         </Form>
-        {error && <div style={{ color: "red" }}> {error.message}</div>}
+        {error && <div style={{ color: "black" }}> {error.message}</div>}
       </Wrapper>
     );
   }

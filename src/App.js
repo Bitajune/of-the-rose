@@ -1,12 +1,12 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
+import firebase from "./components/Firebase/firebase";
 
 import "./App.css";
 import NavBar from "./components/NavBar";
 import { routes } from "./const/routes";
 
 import Signup from "./components/Signup";
-
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Map from "./components/Map";
@@ -16,6 +16,8 @@ import Todo from "./components/Todo";
 import PasswordForm from "./components/PasswordForget";
 
 function App() {
+  const user = firebase.auth.currentUser;
+  console.log(user);
   return (
     <div className="App">
       <NavBar routes={routes} />

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Firebase from "../Firebase/firebase";
+import { Wrapper, Form } from "./style";
 
 class PasswordForgetForm extends Component {
   state = {
@@ -21,22 +22,27 @@ class PasswordForgetForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.onSubmit}>
-        <input
-          name="email"
-          value={this.state.email}
-          onChange={this.onChange}
-          placeholder="Email Address"
-        />
-        <button type="submit">Reset My Password</button>
-      </form>
+      <Wrapper>
+        <h1>Forgot Password?</h1>
+        <Form onSubmit={this.onSubmit}>
+          <input
+            name="email"
+            value={this.state.email}
+            onChange={this.onChange}
+            placeholder="Email Address"
+          />
+          <button type="submit">Reset My Password</button>
+        </Form>
+      </Wrapper>
     );
   }
 }
 
 export const PasswordForgetLink = () => (
   <p>
-    <Link to="/password-forget">Forgot Password?</Link>
+    <Link color={"black"} to="/password-forget">
+      Forgot Password?
+    </Link>
   </p>
 );
 

@@ -29,6 +29,7 @@ const NavBar = ({ routes = [] }) => {
               alt=""
             ></img>
           </Link>
+          <p>Home</p>
         </NavLeft>
         <NavMiddle>
           <p className="title">Of The Rose</p>
@@ -63,5 +64,8 @@ const Hamburger = ({ setIsOpen, isOpen }) => (
     <HamburgerBar></HamburgerBar>
   </HamburgerContainer>
 );
+
+// const LoggedIn = () => <div>LoggedIn</div>;
+// const LoggedOut = () => <div>LoggedOut</div>;
 
 export default NavBar;

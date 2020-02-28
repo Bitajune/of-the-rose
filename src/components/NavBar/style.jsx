@@ -15,6 +15,8 @@ export const NavRow = styled.div`
   margin: 0 auto;
 `;
 export const NavLeft = styled.div`
+  font-family: "Poiret One";
+  font-size: 20px;
   width: 33.333%;
 `;
 export const NavMiddle = styled.div`
