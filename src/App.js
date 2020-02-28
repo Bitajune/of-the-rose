@@ -12,7 +12,7 @@ import Login from "./components/Login";
 import Map from "./components/Map";
 import MeetUp from "./components/MeetUp";
 import Chat from "./components/Chat";
-import Todo from "./components/Todo";
+import List from "./components/List";
 import PasswordForm from "./components/PasswordForget";
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
         <Route exact path="/chat" component={Chat} />
         <Route exact path="/map" component={Map} />
         <Route exact path="/meetup" component={MeetUp} />
-        <Route exact path="/todo" component={Todo} />
+        <Route exact path="/list" component={List} />
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/login" component={Login} />
         <Route exaxt path="/password-forget" component={PasswordForm} />

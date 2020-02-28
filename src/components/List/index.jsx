@@ -1,6 +1,6 @@
 import React from "react";
 
-class Todo extends React.Component {
+class List extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -96,45 +96,58 @@ class Todo extends React.Component {
   render() {
     return (
       <div>
-        <h1 className="app-title">MY LIST</h1>
+        <br></br>
+        <h3 className="list">
+          ✿ <u>To-Do List:</u> This enables us to see the tasks we want to do
+          and we can plan and execute them better. Writing lists means we get
+          our thoughts out of our head. It also stops our brains from working
+          overtime in trying to remind us of the things to do.
+        </h3>
+        <h3 className="list">
+          ✿ <u>Gratitude List:</u> It's east to fixate on the bad things in
+          life, so take a few minutes to acknowledge the good instead. Anxiety
+          is often characterised by 'thinking the worst' and by focusing on all
+          the good things in our lives, we become more naturally optimistic and
+          therefore less anxious.
+        </h3>
+        <h3 className="list">
+          ✿ <u>Today's Achievements:</u> Tackled something difficult today? Make
+          a note of it. Reflect on every achievement you've made today, no
+          matter how big or small. It's the litthe things that add up to that
+          feeling of accomplishment.
+        </h3>
 
-        <div className="container">
-          <div
-            style={{
-              padding: 30,
-              textAlign: "left",
-              maxWidth: 500,
-              margin: "auto"
-            }}
-          >
-            Add an Item...
+        <div className="listDiv">
+          <div className="listName">
+            My List:
             <br />
             <input
+              className="listInput"
               type="text"
-              placeholder="Type item here"
+              placeholder="Don't Worry"
               value={this.state.newItem}
               onChange={e => this.updateInput("newItem", e.target.value)}
             />
             <button
-              className="add-btn btn-floating"
+              className="listBtn"
               onClick={() => this.addItem()}
               disabled={!this.state.newItem.length}
             >
-              <i class="material-icons"> + </i>
+              +
             </button>
-            <br /> <br />
+            <br />
             <ul>
               {this.state.list.map(item => {
                 return (
-                  <li key={item.id}>
-                    {item.value}
+                  <ul className="listItems" key={item.id}>
+                    ✿ {item.value}
                     <button
-                      className="btn btn-floating"
+                      className="deleteBtn"
                       onClick={() => this.deleteItem(item.id)}
                     >
-                      <i class="material-icons">x</i>
+                      Delete
                     </button>
-                  </li>
+                  </ul>
                 );
               })}
             </ul>
@@ -147,4 +160,4 @@ class Todo extends React.Component {
 
 // ReactDOM.render(<Todo />, document.getElementById("root"));
 
-export default Todo;
+export default List;

@@ -4,6 +4,6 @@ export const routes = [
   "chat",
   "map",
   "meetup",
-  "todo",
+  "list",
   "logout"
 ];
