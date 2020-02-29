@@ -1,9 +1,1 @@
-export const routes = [
-  "signup",
-  "login",
-  "chat",
-  "map",
-  "meetup",
-  "list",
-  "logout"
-];
+export const routes = ["signup", "login", "bloom", "drink", "events", "logout"];

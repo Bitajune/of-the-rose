@@ -2,17 +2,18 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 export const NavContainer = styled.div`
-  background-color: ${props => (props.color ? props.color : "black")};
-  border-bottom: 2px solid black;
+  background-color: rgb(233, 183, 182);
+  border-bottom: 2px solid rgb(244, 61, 67);
 `;
 
 export const NavRow = styled.div`
   max-width: 1400px;
-
   width: 100%;
   display: flex;
   align-items: center;
   margin: 0 auto;
+  height: 100%;
+  max-height: 150px;
 `;
 export const NavLeft = styled.div`
   font-family: "Poiret One";
@@ -21,6 +22,7 @@ export const NavLeft = styled.div`
 `;
 export const NavMiddle = styled.div`
   font-family: "Abril Fatface";
+  color: rgb(244, 61, 67);
   font-size: 40px;
   width: 33.333%;
 `;
@@ -44,7 +46,7 @@ export const Link = styled(NavLink)`
     color: rgb(214, 247, 243);
   }
   &.active {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid rgb(244, 61, 67);
   }
   .show > &.active {
     border-bottom: none;
