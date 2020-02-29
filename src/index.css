@@ -112,3 +112,133 @@ ul {
   opacity: 0.5;
   margin-left: 30px;
 }
+
+.titleOne {
+  font-family: "Abril Fatface";
+  font-size: 40px;
+  text-align: left;
+  margin-left: 60px;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+.titleTwo {
+  font-family: "Abril Fatface";
+  font-size: 40px;
+  text-align: right;
+  margin-right: 60px;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+.mainBio {
+  font-family: "Poiret One";
+  text-align: right;
+  margin-right: 30px;
+  margin-left: 69px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.bioDiv {
+  width: 700px;
+  height: 600px;
+  margin: auto;
+  border: 1px solid black;
+  margin-top: 15px;
+  background-color: rgba(188, 143, 143, 0.8);
+  margin-bottom: 15px;
+}
+
+.bioTitle {
+  font-size: 27px;
+}
+
+.bioOne {
+  font-family: "Poiret One";
+  text-align: right;
+  margin-right: 30px;
+  margin-left: 69px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.bioTwo {
+  font-family: "Poiret One";
+  text-align: left;
+  margin-left: 30px;
+  margin-right: 69px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.homeOne,
+.homeTwo,
+.homeThree,
+.homeFour,
+.homeFive,
+.homeSix {
+  width: 700px;
+  height: 350px;
+  margin: auto;
+  border: 1px solid black;
+}
+
+.homeOne,
+.homeThree,
+.homeFive {
+  margin-left: 170px;
+  margin-bottom: 15px;
+}
+
+.homeTwo,
+.homeFour,
+.homeSix {
+  margin-right: 170px;
+  margin-bottom: 15px;
+}
+
+.homeTwo {
+  background-color: rgba(188, 143, 143, 0.7);
+}
+
+.homeThree {
+  background-color: rgba(188, 143, 143, 0.6);
+}
+
+.homeFour {
+  background-color: rgba(188, 143, 143, 0.5);
+}
+
+.homeFive {
+  background-color: rgba(188, 143, 143, 0.4);
+}
+
+.homeSix {
+  background-color: rgba(188, 143, 143, 0.3);
+}
+
+.homePage {
+  background-image: linear-gradient(white, rgb(226, 214, 214), white);
+}
+
+.linkOne {
+  font-family: "Poiret One";
+  text-align: right;
+  margin-right: 60px;
+  font-size: 20px;
+}
+
+.linkTwo {
+  font-family: "Poiret One";
+  text-align: left;
+  margin-left: 60px;
+  font-size: 20px;
+}
+
+a:link,
+a:visited,
+a:active {
+  color: black;
+  letter-spacing: 1px;
+}
