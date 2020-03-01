@@ -17,6 +17,22 @@ a:active {
   margin: auto;
 }
 
+@media (max-width: 950px) {
+  .nav-img {
+    height: 50px;
+  }
+}
+
+img {
+  margin-top: 4px;
+}
+
+@media (max-width: 950px) {
+  img {
+    height: 200px;
+  }
+}
+
 .bioTitle {
   font-family: "Abril Fatface";
   font-size: 40px;
@@ -39,6 +55,12 @@ a:active {
   border: 2px solid rgba(244, 61, 67, 0.7);
 }
 
+@media (max-width: 950px) {
+  .bioDiv {
+    width: 300px;
+  }
+}
+
 .bio {
   text-align: left;
   margin-left: 20px;
@@ -49,4 +71,21 @@ a:active {
 
 .ofTheRose {
   font-size: 27px;
+}
+
+.bloomTitle,
+.drinkTitle,
+.eventTitle {
+  font-family: "Abril Fatface";
+  font-size: 40px;
+  letter-spacing: 2.5px;
+  font-weight: normal;
+  margin-top: 20px;
+}
+
+.bloomImg,
+.drinkImg,
+.eventImg {
+  border: 2px solid rgba(244, 61, 67, 0.7);
+  width: 100%;
 }

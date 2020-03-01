@@ -18,6 +18,9 @@ function Home() {
           and find things that make their world a little brighter. Here you can
           search for florists, find cafes, bars, and look up pop-up events that
           users are hosting.
+          <br></br>
+          <br></br>
+          <a href="/signup">Sign Up</a>
         </h3>
       </div>
     </>

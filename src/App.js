@@ -9,7 +9,7 @@ import Login from "./components/Login";
 import PasswordForm from "./components/PasswordForget";
 import Home from "./components/Home";
 import Bloom from "./components/Bloom";
-import Meet from "./components/Meet";
+import Events from "./components/Events";
 import Drink from "./components/Drink";
 
 import "./App.css";
@@ -26,7 +26,7 @@ function App() {
         <Route exact path="/home" component={Home} />
         <Route exact path="/bloom" component={Bloom} />
         <Route exact path="/drink" component={Drink} />
-        <Route exact path="/meet" component={Meet} />
+        <Route exact path="/events" component={Events} />
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/login" component={Login} />
         <Route exaxt path="/password-forget" component={PasswordForm} />

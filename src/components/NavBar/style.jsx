@@ -23,8 +23,13 @@ export const NavLeft = styled.div`
 export const NavMiddle = styled.div`
   font-family: "Abril Fatface";
   color: rgb(244, 61, 67);
-  font-size: 40px;
+  font-size: 60px;
   width: 33.333%;
+  @media (max-width: 950px) {
+    p.title {
+      font-size: 30px;
+    }
+  }
 `;
 export const NavRight = styled.div`
   font-family: "Poiret One";
