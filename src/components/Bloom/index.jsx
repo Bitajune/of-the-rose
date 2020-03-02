@@ -5,18 +5,8 @@ function Bloom() {
     <>
       <div className="bloomTitle">Bloom</div>
       <div className="bloomImg">
-        <img
-          alt=""
-          src="https://i.imgur.com/ZWGfrtr.jpg"
-          height="300px"
-          width="500px"
-        ></img>
-        <img
-          alt=""
-          src="https://i.imgur.com/0B8f7LP.jpg"
-          height="300px"
-          width="270px"
-        ></img>
+        <img alt="" src="https://i.imgur.com/ELMtpth.png" height="300px"></img>
+        <img alt="" src="https://i.imgur.com/KGHPkdy.png" height="300px"></img>
       </div>
     </>
   );

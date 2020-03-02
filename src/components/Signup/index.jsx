@@ -68,7 +68,7 @@ class Signup extends Component {
         <h1>Sign Up</h1>
         <Form onSubmit={this.handleFormSubmit}>
           <input
-            placeholder="Full Name"
+            placeholder="Username"
             name="username"
             value={username}
             onChange={this.handleChange}

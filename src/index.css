@@ -89,3 +89,16 @@ img {
   border: 2px solid rgba(244, 61, 67, 0.7);
   width: 100%;
 }
+
+.loginInput {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin-bottom: 0.2rem;
+}
+
+.loginBtn {
+  text-align: center;
+  width: 300px;
+  margin: auto;
+}
