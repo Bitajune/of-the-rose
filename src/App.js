@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
-import firebase from "./components/Firebase/firebase";
+// import Firebase from "./components/Firebase/firebase";
 import { loggedOut, loggedIn } from "./const/routes";
 
 import NavBar from "./components/NavBar";
@@ -20,11 +20,10 @@ class App extends Component {
     isLoggedIn: false
   };
 
-  doSetCurrentUser = currentUser => {
-    console.log(currentUser, "current user");
+  doSetCurrentUser = (currentUser, isLogged) => {
     this.setState({
       currentUser,
-      isLoggedIn: true
+      isLoggedIn: isLogged
     });
   };
 
@@ -37,10 +36,19 @@ class App extends Component {
           loggedIn={loggedIn}
           loggedOut={loggedOut}
           currentUser={currentUser}
+          doSetCurrentUser={this.doSetCurrentUser}
         />
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/home" component={Home} />
+          <Route
+            exact
+            path="/"
+            render={() => <Home isLoggedIn={isLoggedIn} />}
+          />
+          <Route
+            exact
+            path="/home"
+            render={() => <Home isLoggedIn={isLoggedIn} />}
+          />
           <Route
             exact
             path="/login"

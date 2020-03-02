@@ -1,6 +1,15 @@
 import React from "react";
 
-function Home() {
+function Home({ isLoggedIn }) {
+  // const homeLoggedIn = () => {
+  //   if (isLoggedIn) {
+  //     return <a href="/bloom">Try it out</a>;
+  //   } else {
+  //     return <a href="/signup">Sign Up</a>;
+  //   }
+  // };
+  console.log(isLoggedIn);
+
   return (
     <>
       <div className="plantImg">
@@ -20,7 +29,15 @@ function Home() {
           that users are hosting.
           <br></br>
           <br></br>
-          <a href="/signup">Sign Up</a>
+          {isLoggedIn ? (
+            <>
+              <a href="/bloom">Try it out</a>
+            </>
+          ) : (
+            <>
+              <a href="/signup">Sign Up</a>
+            </>
+          )}
         </h3>
       </div>
     </>

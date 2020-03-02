@@ -60,7 +60,7 @@ class Signup extends Component {
       username === "";
 
     if (isAuth) {
-      return <Redirect to="/" />;
+      return <Redirect to="/login" />;
     }
 
     return (

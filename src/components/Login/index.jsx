@@ -25,7 +25,7 @@ class Login extends Component {
       this.setState({
         isAuth: true
       });
-      this.props.doSetCurrentUser();
+      this.props.doSetCurrentUser(Firebase.auth.currentUser, true);
     } catch (error) {
       console.log(error);
     }
