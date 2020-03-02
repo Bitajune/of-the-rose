@@ -13,11 +13,11 @@ function Home() {
           mood. Sometimes life gets hard and it becomes difficult to see the
           light in the darkness around us. To feel better, having a positive
           mindset is very necessary, but also the objects and beings that
-          surround us are critical too. Welcome to{" "}
+          surround us are critical too. Welcome to
           <i className="ofTheRose">Of The Rose.</i> A place for people to come
           and find things that make their world a little brighter. Here you can
-          search for florists, find cafes, bars, and look up pop-up events that
-          users are hosting.
+          search for florists, find bars near you, and look up pop-up events
+          that users are hosting.
           <br></br>
           <br></br>
           <a href="/signup">Sign Up</a>

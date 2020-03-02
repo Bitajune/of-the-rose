@@ -25,6 +25,7 @@ class Login extends Component {
       this.setState({
         isAuth: true
       });
+      this.props.doSetCurrentUser();
     } catch (error) {
       console.log(error);
     }
@@ -33,7 +34,7 @@ class Login extends Component {
   render() {
     const { email, password, isAuth } = this.state;
     if (isAuth) {
-      return <Redirect to="/" />;
+      return <Redirect to="/home" />;
     }
     return (
       <Wrapper>

@@ -13,7 +13,8 @@ import {
   Overlay
 } from "./style";
 
-const NavBar = ({ routes = [] }) => {
+const NavBar = ({ loggedOut = [], loggedIn = [], isLoggedIn }) => {
+  console.log(isLoggedIn, "this is logged in");
   const [isOpen, setIsOpen] = useState(false);
 
   window.onresize = () => window.innerWidth > 900 && isOpen && setIsOpen(false);
@@ -35,16 +36,22 @@ const NavBar = ({ routes = [] }) => {
           <p className="title">Of The Rose</p>
         </NavMiddle>
         <NavRight>
-          {routes.map(route => (
-            <Link exact to={`/${route}`}>
-              {route}
-            </Link>
-          ))}
+          {isLoggedIn
+            ? loggedIn.map(route => (
+                <Link exact to={`/${route}`}>
+                  {route}
+                </Link>
+              ))
+            : loggedOut.map(route => (
+                <Link exact to={`/${route}`}>
+                  {route}
+                </Link>
+              ))}
           <Hamburger setIsOpen={setIsOpen} isOpen={isOpen} />
         </NavRight>
       </NavRow>
       <Overlay className={isOpen ? "show" : "hide"}>
-        {routes.map(route => (
+        {loggedOut.map(route => (
           <Link exact to={`/${route}`}>
             {route}
           </Link>

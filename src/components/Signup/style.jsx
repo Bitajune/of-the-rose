@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
 font-family: "Abril Fatface";
+text-align: center;
   font-size: 20px;
   letter-spacing: 4px;
   font-weight: normal;

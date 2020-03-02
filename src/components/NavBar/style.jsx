@@ -17,6 +17,7 @@ export const NavRow = styled.div`
 `;
 export const NavLeft = styled.div`
   font-family: "Poiret One";
+  text-align: center;
   font-size: 20px;
   width: 33.333%;
 `;
