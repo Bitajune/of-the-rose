@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Form } from "./style";
 
 class Event extends Component {
   constructor(props) {
@@ -20,20 +21,23 @@ class Event extends Component {
 
     const datas = this.state.datas;
     const name = this.refs.name.value;
-    const address = this.refs.address.value;
+    const city = this.refs.city.value;
+    const description = this.refs.description.value;
 
     if (this.state.act === 0) {
       //new
       const data = {
         name,
-        address
+        city,
+        description
       };
       datas.push(data);
     } else {
       //update
       const index = this.state.index;
       datas[index].name = name;
-      datas[index].address = address;
+      datas[index].city = city;
+      datas[index].description = description;
     }
 
     this.setState({
@@ -59,7 +63,8 @@ class Event extends Component {
   fEdit = i => {
     const data = this.state.datas[i];
     this.refs.name.value = data.name;
-    this.refs.address.value = data.address;
+    this.refs.city.value = data.city;
+    this.refs.description.value = data.description;
 
     this.setState({
       act: 1,
@@ -82,39 +87,32 @@ class Event extends Component {
             height="300px"
           ></img>
         </div>
-        <div className="App">
+        <div className="formDiv">
           <h2>{this.state.title}</h2>
-          <form ref="myForm" className="myForm">
+          <Form ref="myForm" className="myForm">
+            <input type="text" ref="name" placeholder="Name" />
+            <input type="text" ref="city" placeholder="City" />
             <input
               type="text"
-              ref="name"
-              placeholder="your name"
-              className="formField"
+              ref="description"
+              placeholder="Description"
+              style={{ height: "50px" }}
             />
-            <input
-              type="text"
-              ref="address"
-              placeholder="your address"
-              className="formField"
-            />
-            <button onClick={e => this.fSubmit(e)} className="myButton">
-              submit{" "}
-            </button>
-          </form>
+            <button onClick={e => this.fSubmit(e)}>Enter</button>
+          </Form>
           <pre>
             {datas.map((data, i) => (
-              <li key={i} className="myList">
-                {i + 1}. {data.name}, {data.address}
-                <button
-                  onClick={() => this.fRemove(i)}
-                  className="myListButton"
-                >
-                  remove{" "}
+              <ul key={i} className="eventList">
+                ✿ {data.name}
+                <br></br>✿ {data.city}
+                <br></br>✿ {data.description}
+                <button onClick={() => this.fRemove(i)} className="eventBtn">
+                  Delete{" "}
                 </button>
-                <button onClick={() => this.fEdit(i)} className="myListButton">
-                  edit{" "}
+                <button onClick={() => this.fEdit(i)} className="eventBtn">
+                  Edit{" "}
                 </button>
-              </li>
+              </ul>
             ))}
           </pre>
         </div>

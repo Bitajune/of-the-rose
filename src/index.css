@@ -131,3 +131,34 @@ img {
   color: rgb(214, 247, 243);
   border-bottom: 2px solid rgb(244, 61, 67);
 }
+
+.formDiv {
+  font-family: "Poiret One";
+  border: 2px solid rgba(244, 61, 67, 0.7);
+  margin-bottom: 300px;
+  margin-top: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 70%;
+}
+
+.eventList {
+  font-family: "Poiret One";
+  border: 2px solid rgba(244, 61, 67, 0.7);
+  text-align: center;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.eventBtn {
+  margin-left: 10px;
+  height: 20px;
+
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+}
