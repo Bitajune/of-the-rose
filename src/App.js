@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
-// import Firebase from "./components/Firebase/firebase";
+import Firebase from "./components/Firebase/firebase";
 import { loggedOut, loggedIn } from "./const/routes";
 
 import NavBar from "./components/NavBar";
@@ -20,6 +20,15 @@ class App extends Component {
     isLoggedIn: false
   };
 
+  componentDidMount() {
+    Firebase.auth.onAuthStateChanged(authUser => {
+      authUser &&
+        Firebase.doGetUser(authUser.uid).then(snapShot => {
+          this.doSetCurrentUser(snapShot.data(), true);
+        });
+    });
+  }
+
   doSetCurrentUser = (currentUser, isLogged) => {
     this.setState({
       currentUser,
@@ -29,6 +38,7 @@ class App extends Component {
 
   render() {
     const { isLoggedIn, currentUser } = this.state;
+    console.log(this.state);
     return (
       <div>
         <NavBar

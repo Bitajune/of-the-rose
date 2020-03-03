@@ -1,15 +1,6 @@
 import React from "react";
 
 function Home({ isLoggedIn }) {
-  // const homeLoggedIn = () => {
-  //   if (isLoggedIn) {
-  //     return <a href="/bloom">Try it out</a>;
-  //   } else {
-  //     return <a href="/signup">Sign Up</a>;
-  //   }
-  // };
-  console.log(isLoggedIn);
-
   return (
     <>
       <div className="plantImg">

@@ -23,25 +23,29 @@ class Signup extends Component {
     const { email, passwordOne } = this.state;
     e.preventDefault();
     try {
-      await Firebase.doCreateUserWithEmailAndPassword(email, passwordOne);
-      // this.props.doSetCurrentUser({
-      //   username,
-      //   email
-      // });
+      const { user } = await Firebase.doCreateUserWithEmailAndPassword(
+        email,
+        passwordOne
+      );
+      await Firebase.database
+        .collection("users")
+        .doc(user.uid)
+        .set({
+          username: this.state.username,
+          email: this.state.email
+        });
       this.setState({ isAuth: true });
-    } catch (error) {
-      this.setState({
-        error
-      });
       setTimeout(() => {
         this.setState({
           error: null
         });
-      }, 3000);
+      }, 1500);
+      this.props.history.push("/");
+    } catch (error) {
+      this.setState({
+        error
+      });
     }
-    Firebase.doCreateUserWithEmailAndPassword(email, passwordOne).then(res =>
-      console.log(res)
-    );
   };
 
   render() {
@@ -60,7 +64,7 @@ class Signup extends Component {
       username === "";
 
     if (isAuth) {
-      return <Redirect to="/login" />;
+      return <Redirect to="/" />;
     }
 
     return (
