@@ -51,7 +51,7 @@ img {
   width: 700px;
   height: 100%;
   margin: auto;
-  box-shadow: 10px 10px 5px rgba(244, 61, 67, 0.5);
+  box-shadow: 10px 10px 5px rgba(244, 61, 67, 0.3);
   background-color: rgb(233, 183, 182);
   margin-bottom: 150px;
   border-radius: 10px;
@@ -78,7 +78,7 @@ img {
 
 .bloomTitle,
 .drinkTitle,
-.eventTitle {
+.eatTitle {
   font-family: "Abril Fatface";
   font-size: 40px;
   letter-spacing: 2.5px;
@@ -89,7 +89,7 @@ img {
 
 .bloomDiv,
 .drinkDiv,
-.eventDiv {
+.eatDiv {
   border: 2px solid rgba(244, 61, 67, 0.7);
   width: 100%;
   display: block;
@@ -99,7 +99,7 @@ img {
 
 .bloomImg,
 .drinkImg,
-.eventImg {
+.eatImg {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -130,35 +130,4 @@ img {
 .logoutBtn:hover {
   color: rgb(214, 247, 243);
   border-bottom: 2px solid rgb(244, 61, 67);
-}
-
-.formDiv {
-  font-family: "Poiret One";
-  border: 2px solid rgba(244, 61, 67, 0.7);
-  margin-bottom: 300px;
-  margin-top: 50px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  width: 70%;
-}
-
-.eventList {
-  font-family: "Poiret One";
-  border: 2px solid rgba(244, 61, 67, 0.7);
-  text-align: center;
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-}
-
-.eventBtn {
-  margin-left: 10px;
-  height: 20px;
-
-  display: block;
-  margin-top: auto;
-  margin-bottom: auto;
 }

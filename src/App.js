@@ -9,7 +9,7 @@ import Login from "./components/Login";
 import PasswordForm from "./components/PasswordForget";
 import Home from "./components/Home";
 import Bloom from "./components/Bloom";
-import Events from "./components/Events";
+import Eat from "./components/Eat";
 import Drink from "./components/Drink";
 
 import "./App.css";
@@ -72,7 +72,7 @@ class App extends Component {
           <Route exaxt path="/password-forget" component={PasswordForm} />
           <Route exact path="/bloom" component={Bloom} />
           <Route exact path="/drink" component={Drink} />
-          <Route exact path="/events" component={Events} />
+          <Route exact path="/eat" component={Eat} />
         </Switch>
       </div>
     );
