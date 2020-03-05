@@ -16,8 +16,7 @@ function Home({ isLoggedIn }) {
           surround us are critical too. Welcome to
           <i className="ofTheRose">Of The Rose.</i> A place for people to come
           and find things that make their world a little brighter. Here you can
-          search for florists, find bars near you, and look up pop-up events
-          that users are hosting.
+          search for florists, bars, and restaurants in your city. Cheers!
           <br></br>
           <br></br>
           {isLoggedIn ? (
@@ -25,10 +24,10 @@ function Home({ isLoggedIn }) {
               <a href="/bloom">Try it out</a>
             </>
           ) : (
-            <>
-              <a href="/signup">Sign Up</a>
-            </>
-          )}
+              <>
+                <a href="/signup">Sign Up</a>
+              </>
+            )}
         </h3>
       </div>
     </>
