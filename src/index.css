@@ -148,3 +148,30 @@ img {
 .searchInput {
   height: 20px;
 }
+
+.searchDiv {
+  width: 410px;
+  height: 450px;
+  border: 2px solid rgba(244, 61, 67, 0.7);
+  margin-top: 20px; 
+  margin-left: 300px;
+}
+
+.searchTitle {
+  font-family: "Abril Fatface";
+  font-size: 40px;
+  letter-spacing: 2px;
+  font-weight: normal;
+  margin-top: 0;
+  margin-top: 0;
+}
+
+.searchDisplay {
+  font-family: "Poiret One"; 
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.googleMap {
+margin-left: 20px;
+}

@@ -11,7 +11,7 @@ class Eat extends Component {
   }
 
   onFormSubmit = (query) => {
-    axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/search?location=${query}&term=food&offset=${this.state.searchCounter}&limit=10`, {
+    axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/search?location=${query}&term=food&offset=${this.state.searchCounter}&limit=7`, {
       headers: {
         Authorization: `Bearer ${process.env.REACT_APP_YELP_API_KEY}`
       }
@@ -19,7 +19,7 @@ class Eat extends Component {
       .then((res) => {
         this.setState({
           data: res.data.businesses,
-          searchCounter: this.state.searchCounter + 10
+          searchCounter: this.state.searchCounter + 7
         })
       })
       .catch((err) => {
