@@ -9,15 +9,9 @@ class List extends Component {
     };
 
     componentDidMount = () => {
-        // this.setState({
-        //     data: this.props.data
-        // })
     }
 
     render() {
-
-        console.log(this.props.data, "i am props")
-        console.log(this.state.data, "i am data")
         return (
             <div >
                 {

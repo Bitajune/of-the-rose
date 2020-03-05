@@ -10,7 +10,7 @@ class Bloom extends Component {
   }
 
   onFormSubmit = (query) => {
-    axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/search?location=${query}&term=florist&offset=${this.state.searchCounter}&limit=7`, {
+    axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/search?location=${query}&term=florist&offset=${this.state.searchCounter}&limit=5`, {
       headers: {
         Authorization: `Bearer ${process.env.REACT_APP_YELP_API_KEY}`
       }
@@ -18,7 +18,7 @@ class Bloom extends Component {
       .then((res) => {
         this.setState({
           data: res.data.businesses,
-          searchCounter: this.state.searchCounter + 7
+          searchCounter: this.state.searchCounter + 5
         })
       })
       .catch((err) => {
@@ -27,7 +27,6 @@ class Bloom extends Component {
   }
 
   render() {
-    console.log(this.state.data, "something")
     return (
       <>
         <SearchForm onFormSubmit={this.onFormSubmit} />
